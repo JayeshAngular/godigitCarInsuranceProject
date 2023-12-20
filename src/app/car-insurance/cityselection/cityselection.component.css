@@ -1,0 +1,8 @@
+.Fade {
+    background: black;
+    opacity: 80%;
+}
+a {
+    cursor: pointer;
+    text-decoration: none;
+}

@@ -1,0 +1,12 @@
+.Fade {
+    background: black;
+    opacity: 80%;
+}
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+.YearModal {
+    height: 380px;
+    overflow-y: scroll;
+}

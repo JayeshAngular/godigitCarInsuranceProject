@@ -1,0 +1,18 @@
+.add-ons-container {
+    margin-bottom: 150px;
+}
+.idvText {
+    font-size: 13px;
+}
+.priceFooterborder {
+    position: fixed;
+    bottom: 0px;
+    left: 230px;
+    height: 70px;
+    width: 820px;
+}
+.mandatory{
+    font-size: 13px;
+    color: rgb(196, 6, 6);
+}
+

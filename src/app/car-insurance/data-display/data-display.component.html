@@ -1,0 +1,49 @@
+<div class="container border-warning border rounded mt-4 detailsContainer p-2 shadow">
+    <div class="header text-center border-bottom border-warning">
+        <h3 class="p-2 fw-bold">Verify Your Information</h3>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-6 borderRight mt-2">
+                    <div class="carDetailsSection mt-2 p-2">
+                        <h4 class="fw-bold border-bottom pb-2 text-center">Car Details</h4>
+                        <p class="fs-5 fw-bold text-muted ms-4">Car Brand : <span
+                                class="spanData">{{carData.brandName}}</span>  <span routerLink="/car-insurance/brand-selection" class="ms-2 editIcon"><i
+                                    class="fa-regular fa-pen-to-square"></i></span> </p>
+                        <p class="fs-5 fw-bold text-muted ms-4">Car Model : <span
+                                class="spanData">{{carData.carName}}</span></p>
+                        <p class="fs-5 fw-bold text-muted ms-4">Car Variant : <span
+                                class="spanData">{{carData.variantName}}</span></p>
+                        <p class="fs-5 fw-bold text-muted ms-4">Car Fuel Type : <span
+                                class="spanData">{{carData.fuelType}}</span></p>
+                    </div>
+                </div>
+                <div class="col-md-6 mt-2">
+                    <div class="carRegDeatils mt-2 p-2">
+                        <h4 class="fw-bold border-bottom pb-2 text-center">Car Registration Details</h4>
+                        <p class="fs-5 fw-bold text-muted ms-4"> Car Registration Year : <span
+                                class="spanData">{{carRegData.year}}</span> <span routerLink="/car-insurance/year-selection" class="ms-2 editIcon"><i
+                                    class="fa-regular fa-pen-to-square"></i></span></p>
+                        <p class="fs-5 fw-bold text-muted ms-4">Car Registration Month : <span
+                                class="spanData">{{carRegData.month}}</span></p>
+                        <p class="fs-5 fw-bold text-muted ms-4">Car Registration City : <span
+                                class="spanData">{{carRegData.city}}</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form  #dateForm = "ngForm">
+        <div class="policyExpiry w-75 m-auto pt-2 border-warning border-top">
+            <h6 class="text-center">What is your current Plan Expiry Date?</h6>
+            <input type="text" placeholder="Select Dates" class="form-control w-25 m-auto cursor" name="selectadate" 
+                [(ngModel)]="selectedDate" (ngModelChange)="dateChange()" bsDatepicker required>
+        </div>
+        <div class="m-auto text-center mt-3">
+            <button type="button" class="btn btn-warning px-5" routerLink="/car-insurance/plan-selection" (click)="progressbar()" [disabled]="dateForm.invalid">Continue</button>
+        </div>
+    </form>
+
+
+</div>

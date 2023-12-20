@@ -1,0 +1,11 @@
+.nvabarMainMenu ul li a:hover{
+    color: rgb(255, 217, 0);
+    cursor: pointer;
+}
+.nvabarMainMenu ul li a {
+    font-size: 12px;
+    font-weight: 600;
+}
+.progressbar-Height {
+    height: 5px;
+}

@@ -1,0 +1,14 @@
+.back-light {
+    background-color: #fff;
+}
+.home-input {
+    width: 100%;
+    border: none;
+    height: 50px;
+}
+.carSearchForm {
+    border: 2px solid rgb(235, 219, 0);
+    width: 1000px;
+    position: relative;
+    top: 145px;
+}

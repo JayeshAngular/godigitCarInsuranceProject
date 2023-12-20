@@ -1,0 +1,14 @@
+.Fade {
+    background: black;
+    opacity: 80%;
+}
+.carmodal{
+    height: 380px;
+    overflow: scroll;
+}
+.modalheader{
+    height: 100px;
+}
+.vlist{
+    cursor: pointer;
+}

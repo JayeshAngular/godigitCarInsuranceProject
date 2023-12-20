@@ -1,0 +1,80 @@
+.dropdown:hover .dropdown-menu {
+    display: block;
+    border-top: 2px solid yellow;
+    margin-top: 0; /* remove the gap so it doesn't close */
+}
+.navHoverMenu :hover{
+    color: rgb(255, 217, 0);
+    cursor: pointer;
+    background-color: white;
+    font-weight: 500;
+}
+.nvabarMainMenu ul li a:hover{
+    color: rgb(255, 217, 0);
+    cursor: pointer;
+}
+
+/* poster component */
+.homePoster {
+    background: url('../../assets/home-page-virat-banner-1.svg')no-repeat center center/cover;
+    height: 550px;
+}
+.heading {
+    width: 375px;
+    position: relative;
+    top: 60px;
+    left: 200px;
+}
+.heading p {
+    font-size: 18px;
+    font-weight: 600;
+    color: grey;
+}
+.menu ul{
+    width: 210px;
+    position: relative;
+    top: 150px;
+    left: 550px;
+}
+.menu ul li  {
+    list-style: none;
+}
+.menu ul li a img{
+    list-style: none;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 100%;
+    margin: 10px;
+    margin-bottom: 0;
+    margin-left: 15px;
+}
+.menu a img {
+    width: 85px;
+    height: 65px;
+}
+.menu a :hover {
+    border: 2px solid rgb(235, 219, 0);
+    border-radius: 100%;
+}
+.menu ul li :hover {
+    color:  rgb(235, 219, 0);
+    cursor: pointer;
+
+}
+.menu a :active {
+    border: 2px solid rgb(235, 219, 0);
+    border-radius: 100%;
+}
+
+.activate {
+    /* border-radius: 100%; */
+    border: 2px solid rgb(235, 219, 0);
+}
+.regNum {
+    width: 220px;
+    position: relative;
+    top: 145px;
+    left: 180px;
+    background-color: #fff;
+    cursor: pointer;
+}

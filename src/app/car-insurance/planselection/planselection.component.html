@@ -1,0 +1,119 @@
+<div class="container w-75 mt-3">
+    <h6 class="mt-3">Choose Your Plan</h6>
+    <div class="row">
+        <div class="col-md-7">
+            <div class="claim-status border-bottom mb-2">
+                <div class="row">
+                    <div class="col-md-12 Bg-Light p-2 mt-4">
+                        <div class="row">
+                            <div class="col-md-2 mt-1 Border">
+                                <h5>Claim</h5>
+                            </div>
+                            <div class="col-md-4 mt-1 Border">
+                                <p>Claim Last Year : <span class="text-muted fw-bold"> {{PolicyClaimStatus}}</span></p>
+                            </div>
+                            <div class="col-md-4 mt-1 Border">
+                                <p>NCB Last Year : <span class="text-muted fw-bold"> {{PolicyClaimBonus}}%</span></p>
+                            </div>
+                            <div class="col-md-2 mt-1">
+                                <button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">Edit</button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title fs-5" id="exampleModalLabel">Confirm Claim
+                                                    Details
+                                                </h5>
+                                            </div>
+                                            <div class="modal-body mt-4">
+                                                <div>
+                                                    <p class="fs-5 fw-bold text-muted">Have you made a claim in previous
+                                                        policy period? </p>
+                                                    <div class="row">
+                                                        <div class="col-md-5 border ms-4 text-center rounded shadow claimBlock border m-2 p-2"
+                                                            *ngFor="let status of ClaimStatusArr"
+                                                            (click)="selectStatus(status)">{{status}}</div>
+                                                    </div>
+                                                    <p class="fs-5 fw-bold text-muted">What is your No Claim Bonus? </p>
+                                                    <div class="row">
+                                                        <div class="col-md-3 ms-4 text-center rounded shadow claimBlock border m-2 p-2"
+                                                            *ngFor="let item of ClaimBonusArr"
+                                                            (click)="selectBonus(item)">
+                                                            <a> {{item}}% </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-warning m-auto px-5"
+                                                    data-bs-dismiss="modal">Continue</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="plan-section ms-5 mt-2">
+                <div class="row">
+                    <div class="col-md-5 p-3 cover-section m-2" routerLink="/car-insurance/plan-selection/com-sub"
+                        routerLinkActive="activatedSubPlan">
+                        <p class="c-head mt-2">{{comprehensivePlanName}}</p>
+                        <h5 class="mt-4"> <span class="fs-6 text-muted text-decoration-line-through fw-light"> ₹{{comprehensivePlanNetPremium / 12 | number:'.0-0'}}</span> ₹{{comprehensiveDiscountedPlan / 12 | number:'.0-0'}}/<span class="fs-6">month</span>
+                        </h5>
+                        <p class="c-text mt-4 border-bottom border-warning pb-2">{{comprehensivePlan?.planDes}}</p>
+                    </div>
+                    <div class="m-2 col-md-5 p-3  cover-section" routerLink="/car-insurance/plan-selection/thirdp-sub"
+                        routerLinkActive="activatedSubPlan">
+                        <p class="c-head mt-2">{{thirdPartyPlanName}}</p>
+                        <h5 class="mt-4">₹{{thirdPartyPlanNetPremium / 12 | number:'.0-0'}}/<span
+                                class="fs-6">month</span></h5>
+                        <p class="c-text mt-4 border-bottom border-warning pb-4">{{thirdpartyPlan?.planDes}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="sub-plan-section">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="plan-car">
+                <img src="../../../assets/plan-car.svg">
+            </div>
+            <div class="row mt-2">
+                <div class="col-md-4  w-25">
+                    <img class="w-100 p-1" src="../../../assets/wcu_certified.png">
+                </div>
+                <div class="col-md-8 w-75">
+                    <p class="text-muted">Advanced Claim payment <br> <span class="service-text fw-bold m-0">6 Months
+                            Warrenty</span> <br>On Repair</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4  w-25">
+                    <img class="w-100 p-1" src="../../../assets/wcu_certified.png">
+                </div>
+                <div class="col-md-8 w-75 ">
+                    <p class="text-muted">Awarded <br> <span class="service-text fw-bold m-0">General Insurance
+                            Co.</span> <br>Of the year 2019</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4  w-25">
+                    <img class="w-100 p-1" src="../../../assets/wcu_certified.png">
+                </div>
+                <div class="col-md-8 w-75">
+                    <p class="text-muted">
+                        Certified & Licensed by <br> <span class="service-text fw-bold m-0">IRDAI Reg. 158y</span>
+                        <br>Indian Insurance Regulator</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,46 @@
+<div class="modal Fade" id="exampleModal" tabindex="-1" [ngStyle]="{'display':display}">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modalheader text-center border-bottom">
+          <h6  class="modal-title p-2 w-50 m-auto mt-2" id="exampleModalLabel">Which 4-Wheeler do you own?</h6>
+          <p  class="modal-title fw-bold p-2 w-50 m-auto mt-2" id="exampleModalLabel">{{carBrandlname}}-{{carModelname}}</p>
+        </div>
+        <div class="modal-body ">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-12  border-bottom">
+                <div class="row">
+                  <div class="col-md-2 p-2" *ngFor="let item of FuelVariantsArr" (click)="fuelSelected(item)">
+                    <a class="p-2 m-2 fw-bold  po text-muted" > {{item}}  </a>
+                  </div>
+                </div>
+                </div>
+            </div>
+          </div>
+          <!-- petrol car display -->
+          <div   class="VarientModal mt-2" *ngIf="petrolVariantDisplay">
+              <div *ngFor="let model of variantList">
+                <ul class="variantList" (click)="selectVarient(model.new_variant)"  *ngIf="model.FuelType == 'Petrol'">
+                  <li class="p-2 border rounded m-1">{{model.new_variant}}</li>
+                </ul>
+              </div>
+          </div>
+          <!-- diesel car display -->
+          <div class="VarientModal mt-2" *ngIf="DieselVariantDisplay">
+              <div *ngFor="let model of variantList">
+                <ul class="variantList" (click)="selectVarient(model.new_variant)"  *ngIf="model.FuelType == 'Diesel'">
+                  <li class="p-2 border rounded m-1">{{model.new_variant}}</li>
+                </ul>
+              </div>
+              <!-- eletric car display -->
+          <div class="VarientModal mt-2" *ngIf="ElectricVariantDisplay">
+              <div *ngFor="let model of variantList">
+                <ul class="variantList" (click)="selectVarient(model.new_variant)"  *ngIf="model.FuelType == 'Electric' ">
+                  <li class="p-2 border rounded m-1">{{model.new_variant}}</li>
+                </ul>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

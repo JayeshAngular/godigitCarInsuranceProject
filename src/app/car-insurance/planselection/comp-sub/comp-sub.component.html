@@ -1,0 +1,36 @@
+<div class="container add-ons-container w-100 mt-2">
+    <div class="idv p-2 border rounded">
+        <div class="name mb-0 d-flex justify-content-between">
+            <p class="fs-6 mt-2 mb-0 fw-bold">IDV (Insured Valur)</p>
+            <p class="border fs-6 mb-0 text-success fw-bold rounded p-2">₹{{price}}</p>
+        </div>
+        <p class="idvText text-success m-0">80% of the users select IDV between {{vehicleIDVDef | currency:'INR'}} to {{vehicleIDVMax | currency:'INR'}}</p>
+        <div class="rangebar">
+            <input type="range" class="form-range form-range-thumb-bg" id="customRange1" min="{{vehicleIDVMin}}" max="{{vehicleIDVMax}}" value="{{vehicleIDVMax}}" [(ngModel)]="price">
+        </div>
+        <div class="prices d-flex mb-0 justify-content-between">
+            <p class="mb-0">₹{{vehicleIDVMin |  number:'.0-0'}}</p>
+            <p class="mb-0">₹{{vehicleIDVMax |  number:'.0-0'}}</p>
+        </div>
+    </div>
+    <!-- addons -->
+    <div class="add-ons border  p-2 mt-2">
+        <p class="mt-2 fs-5 text-success fw-bold">Add Extra coverages (Valid for 1 yr)</p>
+        <div class="form-check border-bottom border-warning" *ngFor="let item of addOnCoverageList; let i = index">
+            <input class="form-check-input p-2" type="checkbox" value="" id="flexCheckChecked" [(ngModel)]="item.selection" (ngModelChange)="calculateComprehensive(item.selection,i)">
+            <label class="form-check-label mb-0 ms-3 text-muted fw-bold fs-5" for="flexCheckChecked">{{item.name}}</label>
+            <p class="mandatory ms-3 m-0">Mandatory</p>
+            <p class="ms-3 fw-bold">₹ {{item.netPremium  |  number:'.0-0'}}</p>
+          </div>
+    </div>
+</div>
+<!-- float price -->
+<div class="priceFooterborder bg-light shadow-lg p-3 border rounded d-flex justify-content-between">
+    <div class="price">
+        <p > <span class="text-muted text-decoration-line-through fw-bold"> {{CompPlanFinalPrice | currency:'INR'}} </span> <span class="fw-bold fs-4">&nbsp;{{CompPlanFinalDiscPrice | currency:'INR'}}</span> </p>
+    </div>
+    <div class="button">
+        <button class="btn btn-warning px-5">Continue</button>
+    </div>
+</div>
+

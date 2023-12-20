@@ -1,0 +1,14 @@
+.detailsContainer .header {
+    height: 55px;
+}
+.borderRight {
+    border-right: 2px solid rgb(243, 187, 5);
+}
+.spanData{
+    color: black;
+    font-size: 17px;
+    font-weight:600;
+}
+.editIcon {
+    cursor: pointer;
+}

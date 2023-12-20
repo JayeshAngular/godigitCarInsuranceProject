@@ -1,0 +1,19 @@
+<div class="modal Fade" id="exampleModal" tabindex="-1" [ngStyle]="{'display':display}">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Which 4-Wheeler do you own?</h5>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-5 m-2 p-2 border rounded shadow" *ngFor="let item of brandList"  (click)="selectBrand(item.brandName)">
+                <a > <img [src]="item.imgPath" width="50px" height="25px"> &nbsp; {{item.brandName}}</a>
+              
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

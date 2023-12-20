@@ -1,0 +1,19 @@
+<div class="modal Fade" id="exampleModal" tabindex="-1" [ngStyle]="{'display':display}">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="border-bottom modalheader text-center">
+          <h6  class="modal-title p-2 w-50 m-auto mt-2" id="exampleModalLabel">Which 4-Wheeler do you own?</h6>
+          <p  class="modal-title fw-bold p-2 w-50 m-auto mt-2" id="exampleModalLabel">{{brandName}}</p>
+        </div>
+        <div class="modal-body carmodal">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-8 p-2 mb-2 m-auto border rounded text-center shadow-sm vlist cursor" *ngFor="let item of varientList"  (click)="selectCar(item.concat)">
+                <a> {{item.concat}} &nbsp; <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,18 @@
+<div class="modal Fade" id="exampleModal" tabindex="-1" [ngStyle]="{'display':display}">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6 class="modal-title" id="exampleModalLabel">When was the car registered?</h6>
+        </div>
+        <div class="modal-body YearModal">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-5 p-2 text-center border m-1 ms-4 rounded" *ngFor="let item of yearArr" (click)="selectYear(item)">
+              <a class="p-2 text-muted fw-bold"> {{item}} </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
